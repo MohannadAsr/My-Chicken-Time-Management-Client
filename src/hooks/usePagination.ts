@@ -1,4 +1,3 @@
-import { PaginationDto } from '@src/Api/Processes/Dto';
 import { useState, useMemo } from 'react';
 
 export const usePagination = (
@@ -44,7 +43,7 @@ export const usePagination = (
     }));
   };
 
-  const updateServerPaination = (pagination: PaginationDto) => {
+  const updateServerPaination = (pagination: any) => {
     setPagination((prevPagination) => ({
       ...prevPagination,
       ...pagination,
