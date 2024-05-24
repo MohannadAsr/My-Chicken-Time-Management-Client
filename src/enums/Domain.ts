@@ -1,5 +1,5 @@
 export enum Domain {
-  API_URL = 'http://localhost:8080',
+  API_URL = 'https://my-chicken-time-management-server.vercel.app',
   localStorageName = 'my-chicken-timer',
 }
 // http:localhost:8080
