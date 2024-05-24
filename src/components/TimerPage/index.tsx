@@ -11,7 +11,7 @@ import TimeCounter from './TimeCounter';
 function TimerPage() {
   const { GetUserData } = useAuth();
   const { isLoading, data, isError, isFetching, refetch } =
-    useUserTimeSlotQuery(GetUserData().id);
+    useUserTimeSlotQuery(GetUserData()?.id);
 
   if (isLoading)
     return (

@@ -20,6 +20,8 @@ function MainLayout({
     isLoggedIn() ? null : navigate('/signin');
   }, [isLoggedIn()]);
 
+  if (!isLoggedIn()) return <></>;
+
   if (hideMenu)
     return (
       <div className="  h-full  relative">
