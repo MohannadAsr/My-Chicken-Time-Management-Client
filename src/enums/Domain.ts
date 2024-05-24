@@ -3,5 +3,4 @@ export enum Domain {
   localStorageName = 'my-chicken-timer',
 }
 // http:localhost:8080
-//https://app-082886b9-cd0d-4805-8ad0-f80aa4a9adc2.cleverapps.io
-// https://app-082886b9-cd0d-4805-8ad0-f80aa4a9adc2.cleverapps.io
+// https://my-chicken-time-management-server.vercel.app

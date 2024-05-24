@@ -9,6 +9,7 @@ import { useAuth } from '@src/hooks/useAuth';
 import { useCountDown } from '@src/hooks/useCountDown';
 import { ErrorButton, Successbtn } from '@src/styles/globalMuiStyls';
 import { format } from 'date-fns';
+import { t } from 'i18next';
 import React from 'react';
 const ConfirmEndTimer = ({ id }: { id: string }) => {
   const { GetUserData } = useAuth();
@@ -24,29 +25,31 @@ const ConfirmEndTimer = ({ id }: { id: string }) => {
       <DashDialog
         open={open}
         handleClose={() => setOpen(false)}
-        title={'Ending Time Confirm'}
+        title={t('Stopping Time Confirmation')}
         body={
           <>
             <div className=" flex flex-col gap-4">
               <div>
                 <p className=" text-6">
-                  Are You Sure you want to End The Timer ?
+                  {t('Are You Sure you want to End The Timer ?')}
                 </p>
                 <p className=" text-[13px]">
-                  You Cannot Change Your Time Later.
+                  {t('You Cannot Change Your Time Later.')}
                 </p>
               </div>
               <div className=" flex items-center justify-center gap-4">
                 <Successbtn loading={isPending} onClick={endTimer}>
-                  Yes
+                  {t('Yes')}
                 </Successbtn>
-                <ErrorButton onClick={() => setOpen(false)}>No</ErrorButton>
+                <ErrorButton onClick={() => setOpen(false)}>
+                  {t('No')}
+                </ErrorButton>
               </div>
             </div>
           </>
         }
       />
-      <ErrorButton onClick={() => setOpen(true)}>Stop</ErrorButton>
+      <ErrorButton onClick={() => setOpen(true)}>{t('Stop')}</ErrorButton>
     </>
   );
 };
@@ -146,7 +149,7 @@ function TimeCounter({
             onClick={CreateTimeSlot}
             loading={isPending || isFetching}
           >
-            Start Timer
+            {t('Start')}
           </Successbtn>
         </>
       )}

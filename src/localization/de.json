@@ -40,6 +40,7 @@
     "Time Statstics": "Zeitstatistiken",
     "Add Multiple Workers": "Mehrere Mitarbeiter hinzufügen",
     "Worker": "Mitarbeiter",
+    "worker": "Mitarbeiter",
     "Time Range": "Zeitraum",
     "New Time Slot": "Neues Zeitfenster",
     "Start Time": "Startzeit",
@@ -53,6 +54,13 @@
     "Last Month": "Letzten Monat",
     "Custom Date": "Benutzerdefiniertes Datum",
     "Add Time Slot": "Zeitabschnitt hinzufügen",
-    "Edit Time Slot": "Zeitabschnitt bearbeiten"
+    "Edit Time Slot": "Zeitabschnitt bearbeiten",
+    "Yes": "Ja",
+    "No": "Nein",
+    "Start": "Start",
+    "Stop": "Stopp",
+    "Are You Sure you want to End The Timer ?": "Sind Sie sicher, dass Sie den Timer beenden möchten?",
+    "You Cannot Change Your Time Later.": "Sie können Ihre Zeit später nicht mehr ändern.",
+    "Stopping Time Confirmation": "Bestätigung der Zeitunterbrechung"
   }
 }

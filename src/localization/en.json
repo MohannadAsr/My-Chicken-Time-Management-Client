@@ -53,6 +53,13 @@
     "Last Month": "Last Month",
     "Custom Date": "Custom Date",
     "Add Time Slot": "Add Time Slot",
-    "Edit Time Slot": "Edit Time Slot"
+    "Edit Time Slot": "Edit Time Slot",
+    "Yes": "Yes",
+    "No": "No",
+    "Start": "Start",
+    "Stop": "Stop",
+    "Are You Sure you want to End The Timer ?": "Are You Sure you want to End The Timer ?",
+    "You Cannot Change Your Time Later.": "You Cannot Change Your Time Later.",
+    "Stopping Time Confirmation": "Stopping Time Confirmation"
   }
 }
