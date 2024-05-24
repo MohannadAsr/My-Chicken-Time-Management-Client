@@ -1,11 +1,12 @@
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import { Button } from '@mui/material';
+import { t } from 'i18next';
 import { CSVLink } from 'react-csv';
 import { useTranslation } from 'react-i18next';
 
 const headers = [
-  { label: 'Worker Name', key: 'name' },
-  { label: 'Total Time', key: 'lastUpdated' },
+  { label: t('Worker Name'), key: 'name' },
+  { label: t('Total Time'), key: 'lastUpdated' },
 ];
 
 export const processesToCSVData = (

@@ -3,14 +3,15 @@ import { Button } from '@mui/material';
 import { TimeSlotDto } from '@src/Api/TimeSlots/Dto';
 import { useCountDown } from '@src/hooks/useCountDown';
 import { format } from 'date-fns';
+import { t } from 'i18next';
 import { CSVLink } from 'react-csv';
 import { useTranslation } from 'react-i18next';
 
 const headers = [
-  { label: 'Worker Name', key: 'name' },
-  { label: 'Start Time', key: 'quantity' },
-  { label: 'End Time', key: 'dateCreated' },
-  { label: 'Total Time', key: 'lastUpdated' },
+  { label: t('Worker Name'), key: 'name' },
+  { label: t('Start Time'), key: 'quantity' },
+  { label: t('End Time'), key: 'dateCreated' },
+  { label: t('Total Time'), key: 'lastUpdated' },
 ];
 
 export const processesToCSVData = (data: TimeSlotDto[], getGapIndays) => {
