@@ -7,11 +7,18 @@ import {
 import { useAuth } from '@src/hooks/useAuth';
 import { Successbtn } from '@src/styles/globalMuiStyls';
 import TimeCounter from './TimeCounter';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function TimerPage() {
   const { GetUserData } = useAuth();
+  const navigate = useNavigate();
   const { isLoading, data, isError, isFetching, refetch } =
     useUserTimeSlotQuery(GetUserData()?.id);
+
+  React.useEffect(() => {
+    GetUserData()?.role == 'admin' ? navigate('/workers') : null;
+  }, [GetUserData()]);
 
   if (isLoading)
     return (
