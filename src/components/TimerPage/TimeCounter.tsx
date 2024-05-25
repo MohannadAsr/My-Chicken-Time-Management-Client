@@ -12,12 +12,16 @@ import { format } from 'date-fns';
 import { t } from 'i18next';
 import React from 'react';
 const ConfirmEndTimer = ({ id }: { id: string }) => {
-  const { GetUserData } = useAuth();
+  const { GetUserData, LogOut } = useAuth();
   const { mutate, isPending } = MutateEndTimeSlot(GetUserData()?.id);
   const [open, setOpen] = React.useState<boolean>(false);
 
   const endTimer = () => {
-    mutate(id);
+    mutate(id, {
+      onSuccess: (data) => {
+        if (data) LogOut();
+      },
+    });
   };
 
   return (
@@ -61,7 +65,7 @@ function TimeCounter({
   data: TimeSlotDto;
   isFetching: boolean;
 }) {
-  const { GetUserData } = useAuth();
+  const { GetUserData, LogOut } = useAuth();
   const { getGapIndays } = useCountDown();
   const [Counter, setCounter] = React.useState<{
     hour: number;
@@ -79,7 +83,11 @@ function TimeCounter({
 
   // Create TimeSlot
   const CreateTimeSlot = () => {
-    createTimeSlot();
+    createTimeSlot(null, {
+      onSuccess: (data) => {
+        if (data) LogOut();
+      },
+    });
   };
 
   React.useEffect(() => {

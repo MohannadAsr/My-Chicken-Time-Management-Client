@@ -139,7 +139,7 @@ function TimeSlotsTable({
                   format(new Date(item?.endTime), 'yyyy-MM-dd HH:mm')
                 ) : (
                   <>
-                    <Chip color="success" label={'In Progress'} />
+                    <Chip color="success" label={t('In Progress')} />
                   </>
                 )}
               </>,

@@ -61,6 +61,7 @@
     "Stop": "Stopp",
     "Are You Sure you want to End The Timer ?": "Sind Sie sicher, dass Sie den Timer beenden möchten?",
     "You Cannot Change Your Time Later.": "Sie können Ihre Zeit später nicht mehr ändern.",
-    "Stopping Time Confirmation": "Bestätigung der Zeitunterbrechung"
+    "Stopping Time Confirmation": "Bestätigung der Zeitunterbrechung",
+    "In Progress": "Im Gange"
   }
 }

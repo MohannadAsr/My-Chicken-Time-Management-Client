@@ -60,6 +60,7 @@
     "Stop": "Stop",
     "Are You Sure you want to End The Timer ?": "Are You Sure you want to End The Timer ?",
     "You Cannot Change Your Time Later.": "You Cannot Change Your Time Later.",
-    "Stopping Time Confirmation": "Stopping Time Confirmation"
+    "Stopping Time Confirmation": "Stopping Time Confirmation",
+    "In Progress": "In Progress"
   }
 }
