@@ -117,6 +117,12 @@ function TimeSlotFilter({
           <DatePicker
             disabled={FilterOptions.timeRange !== 'custom_date'}
             value={FilterOptions.startDate}
+            onChange={(val) => {
+              setFilterOptions({
+                ...FilterOptions,
+                startDate: new Date(val).toISOString(),
+              });
+            }}
             label={t('startDate')}
           />
         </FormControl>
@@ -126,6 +132,12 @@ function TimeSlotFilter({
           <DatePicker
             disabled={FilterOptions.timeRange !== 'custom_date'}
             value={FilterOptions.endDate}
+            onChange={(val) => {
+              setFilterOptions({
+                ...FilterOptions,
+                endDate: new Date(val).toISOString(),
+              });
+            }}
             label={t('endDate')}
           />
         </FormControl>
