@@ -53,6 +53,20 @@ export const useAuth = () => {
     return userData ? true : false;
   };
 
+  const AuthDevice = () => {
+    localStorage.setItem(
+      `${Domain.localStorageName}-DeviceAuth`,
+      'MYCHICKENTIMER'
+    );
+  };
+
+  const isDevicedAuthed = () => {
+    const authPass = localStorage.getItem(
+      `${Domain.localStorageName}-DeviceAuth`
+    );
+    return authPass && authPass == 'MYCHICKENTIMER';
+  };
+
   return {
     Login,
     LogOut,
@@ -61,5 +75,7 @@ export const useAuth = () => {
     GetAccessToken,
     SetuserData,
     isAuth,
+    isDevicedAuthed,
+    AuthDevice,
   };
 };

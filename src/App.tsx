@@ -13,6 +13,7 @@ import { switchMode } from './reducers/AppSlice';
 import AppRoutes from './AppRoutes';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3';
+import DeviceAuthProvider from './layouts/DeviceAuthProvider';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -47,11 +48,13 @@ function App() {
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <ThemeProvider theme={mode == 'dark' ? darkTheme : lightTheme}>
           <CssBaseline />
-          <div className=" relative  ">
-            <DeleteContainer />
-            <ToastContainer />
-            <AppRoutes />
-          </div>
+          <DeviceAuthProvider>
+            <div className=" relative  ">
+              <DeleteContainer />
+              <ToastContainer />
+              <AppRoutes />
+            </div>
+          </DeviceAuthProvider>
         </ThemeProvider>
       </LocalizationProvider>
     </>
